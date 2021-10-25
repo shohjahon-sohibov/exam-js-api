@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main class="main">
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-4 users">
+          <ul class="list-unstyled js-users-output user-ul"></ul>
+        </div>
+        
+        <div class=" col-4 posts">
+          <ul class="list-unstyled js-posts-output"></ul>
+        </div>
+        
+        <div class="col-4">
+          <ul class="list-unstyled js-comments-output"></ul>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+  
+  <!-- =================
+    ======    user template ====
+    ====================   -->
+    
+    <template id="js-user-template">
+      <li class="p-2 user-card">
+        <h2 class="fs-5 name"></h2>
+        <h2 class="fs-5 user-name"></h2>
+        <a class="text-decoration-none email"></a>
+        <p class="address"></p>
+        <button class="btn btn-dark js-user-button" type="submit">Posts</button>
+      </li>
+    </template>
+    
+    <!-- =================
+      ======    post template ====
+      ====================   -->
+      
+      <template id="js-post-template">
+        <li class="list-unstyled ps-3 pe-3 pb-2 post-card">
+          <h2 class="fs-5 post-title"></h2>
+          <p class="post-body"></p>
+        <button class="btn btn-dark js-post-button" type="submit">Comment</button>
+      </li>
+      </template>
+      
+      <!-- =================
+        ======    comment template ====
+        ====================   -->
+        
+        <template id="js-comment-template">
+          <li class="list-unstyled comment-card">
+            <h2 class="fs-5 comment-title"></h2>
+            <a class="text-decoration-none comment-email" href="#"></a>
+            <p class="comment-body"></p>
+          </li>
+        </template>
+        
+        
+        
+        
+        <script src="./bootstrap/js/bootstrap.min.js"></script>
+        <script src="./js/utils.js"></script>
+        <script src="./js/users.js"></script>
+        <script src="./js/posts.js"></script>
+        <script src="./js/comments.js"></script>
+      </body>
+      </html>
